@@ -1,0 +1,13 @@
+<h2>Patient Records</h2>
+<table border="1">
+    <tr><th>ID</th><th>Name</th><th>Age</th><th>Disease</th><th>Action</th></tr>
+    {% for patient in patients %}
+    <tr>
+        <td>{{ patient[0] }}</td>
+        <td>{{ patient[1] }}</td>
+        <td>{{ patient[2] }}</td>
+        <td>{{ patient[3] }}</td>
+        <td><a href="/delete/{{ patient[0] }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
